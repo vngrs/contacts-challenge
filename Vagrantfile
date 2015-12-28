@@ -90,7 +90,7 @@ Vagrant.configure(2) do |config|
     rm -f equip_base.sh equip_java8.sh
 
     echo "Installing Maven 3.3.9"
-    wget --no-check-certificate https://github.com/aglover/ubuntu-equip/raw/master/equip_maven3.sh && bash equip_maven3.sh 3.3.9
+    wget --no-check-certificate https://github.com/furkanvarol/ubuntu-equip/raw/master/equip_maven3.sh && bash equip_maven3.sh 3.3.9
 
     echo "Installing Mongo 3.2"
     wget --no-check-certificate https://github.com/furkanvarol/ubuntu-equip/raw/master/equip_mongodb3.sh && bash equip_mongodb3.sh
