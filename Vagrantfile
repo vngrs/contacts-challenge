@@ -25,6 +25,7 @@ Vagrant.configure(2) do |config|
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
   # config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -40,6 +41,7 @@ Vagrant.configure(2) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
+  config.vm.synced_folder "~/codebase/challenge/java", "/challenges"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -92,8 +94,8 @@ Vagrant.configure(2) do |config|
     echo "Installing Maven 3.3.9"
     wget --no-check-certificate https://github.com/furkanvarol/ubuntu-equip/raw/master/equip_maven3.sh && bash equip_maven3.sh 3.3.9
 
-    echo "Installing Mongo 3.2"
-    wget --no-check-certificate https://github.com/furkanvarol/ubuntu-equip/raw/master/equip_mongodb3.sh && bash equip_mongodb3.sh
+    echo "Installing MySQL"
+    wget --no-check-certificate https://github.com/furkanvarol/ubuntu-equip/raw/master/equip_mysql.sh && bash equip_mysql.sh
 
     echo "Vagrant up for a challenge!"
   SHELL
