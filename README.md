@@ -29,5 +29,9 @@ $ vagrant ssh
 
 Remember all files in `vngrs-contacts-challenge` folder will be synchronized with the VM's `\vagrant` folder.
 
+## Testing
+We provide an acceptance test with simple test cases for convinience. It can be found in `/vagrant/test` folder
+and could be run with `amm acceptance\_tests.sc` command.
+
 [vagrant]: <https://www.vagrantup.com/>
 
