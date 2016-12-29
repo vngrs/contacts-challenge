@@ -97,6 +97,9 @@ Vagrant.configure(2) do |config|
     echo "Installing MySQL"
     wget --no-check-certificate https://github.com/furkanvarol/ubuntu-equip/raw/master/equip_mysql.sh && bash equip_mysql.sh
 
+    echo "Installing ammonite"
+    curl -L -o /usr/local/bin/amm https://git.io/v19XJ && chmod +x /usr/local/bin/amm
+
     echo "Vagrant up for a challenge!"
   SHELL
 end
